@@ -1,0 +1,49 @@
+
+
+// Display
+$display: (none, flex, block, inline-block);
+
+@each $value in $display{
+    .d-#{$value}{
+        display: $value;
+    }
+}
+
+.w-100{
+    width: 100%;
+}
+
+// Padding
+.p-0{
+    padding: 0px !important;
+}
+
+// Margin
+.ml-auto{ margin-left: auto; }
+.mr-auto{ margin-right: auto; }
+.mx-auto{
+    @extend .ml-auto, .mr-auto;
+}
+.m-0{
+    margin: 0px !important;
+}
+// Links
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+
+// Lists
+ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+// Flex
+.flex-end{
+    display: flex;
+    align-items: flex-end;
+}

@@ -1,0 +1,170 @@
+.pointer{
+  cursor: pointer;
+}
+.player{
+  height: 90px;
+  width: 100%;
+  background-color: color("dark");
+  color: color("white");
+  position: fixed;
+  bottom: 0px;
+  z-index: 103;
+  .close-icon{
+      @extend .pointer;
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      font-size: 24px;
+      transform: translateY(-50%);
+      opacity: .5;
+      @include mdr{
+          font-size: 20px;
+          right: 20px;
+          top: 20px;
+      }
+      &:hover{
+          opacity: 1;
+      }
+  }
+  .player-container{
+      width: 80%;
+      margin: 0px auto;
+      height: 100%;
+      display: flex;
+      align-items: cneter;
+      justify-content: space-between;
+      @include mdr{
+          width: 100%;
+          padding: 0px 10px;
+      }
+  }
+  .d-flex{
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+  }
+  
+  .user{
+      margin-right: 50px;
+      @include mdr{
+          margin-right: 20px;
+      }   
+      img{
+          width: 60px;
+          max-height: 60px;
+          object-position: center;
+          object-fit: cover;
+          margin-right: 5px;
+      }
+  }
+  .user-info{
+      font-weight: bold;
+      .username, span{
+          display: block;
+      }
+      .username{
+          font-size: 14px;
+          margin-bottom: 10px;
+          &:hover{
+              color: darken(color("white"), 10);
+          }
+      }
+      span{
+          font-size: 12px;
+      }
+  }
+  .controls{
+      flex-grow: 1;
+      .play{
+          @extend .pointer;
+          font-size: 30px;
+          margin-right: 15px;
+          &:hover{
+              color: darken(color("white"), 10);
+          }
+          @include mdr{
+              margin-right: 10px;
+              font-size: 20px;
+          }
+      }
+      .repeat{
+          margin-right: 20px;
+          font-size: 16px;
+          color: transparentize($color: color("white"), $amount: .5);
+          @include mdr{
+              margin-right: 10px;
+              font-size: 14px;
+          }
+          &.active{
+              color: color("white");
+          }
+      }
+      .number{
+          font-size: 14px;
+          margin: 0px 10px;
+          @include mdr{
+              font-size: 12px;
+              margin: 0px 5px;
+          }
+
+      }
+  }
+
+  .sound{
+      width: 100px;
+      margin-left: 20px;
+      .full{
+          height: 5px;
+          border-radius: 5px;
+      }
+      .circle{
+          width: 15px;
+          height: 15px;
+          border-width: 2px;
+      }
+      .icon{
+          margin-right: 10px;
+      }
+  }
+}
+
+.slider{
+  flex-grow: 1;
+  $height: 10px;
+  .full{
+      @extend .pointer;
+      width: 100%;
+      height: $height;
+      border-radius: $height;
+      background-color: transparentize($color: color("primary"), $amount: .5);
+      @include mdr{
+          height: 6px;
+          border-radius: 5px;
+      }
+  }
+  .finished{
+      position: relative;
+      width: 50%;
+      height: 100%;
+      border-radius: $height;
+      background-color: color("primary");
+  }
+  .circle{
+      $circleSize: 25px;
+      position: absolute;
+      top: 50%;
+      right: 0px;
+      transform: translate(50%, -50%);
+      height: $circleSize;
+      width: $circleSize;
+      border-radius: 50%;
+      background-color: color("white");
+      border: 5px solid color("primary");
+      @include mdr{
+          height: 17px;
+          width: 17px;
+          border: 3px solid color("primary");
+      }
+  }
+
+}

@@ -1,0 +1,135 @@
+label{
+  display: block;
+  color: color("dark");
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea{
+  display: block;
+  font-size: 18px;
+  padding: 10px;
+  font-weight: bold;
+  background-color: color("white");
+  border: none;
+  box-shadow: 3px 3px 6px transparentize($color: color("black"), $amount: 1 - .16);
+  outline:none;
+  &:focus{
+      box-shadow: 0px 0px 6px color("primary");
+  }
+  &.invalid{
+      background-color: #FFE4E4;
+  }
+}
+form.w-100{
+  width: 100%;
+
+  .row{
+      margin-bottom: 30px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea{
+      width: 100%;
+  }
+  button[type="submit"]{
+      background-color: color("primary");
+      color: color("white");
+      font-size: 20px;
+      padding: 5px 20px;
+      border: none;
+      font-weight: bold;
+      &:hover{
+          background-color: darken(color("primary"), 5);
+      }
+  }
+}
+
+
+.form-group{
+  &:not(:last-child), &.m{
+      margin-bottom: 30px;
+  }
+}
+
+button[type="submit"]{
+  cursor: pointer;
+}
+
+.error{
+  font-size: 14px;
+  color: color("danger");
+}
+
+// Progress
+.progress{
+  height: 25px;
+  width: 100%;
+  box-shadow: -3px -3px 6px color("white") inset, 3px 3px 6px transparentize(color("black"), 1 - .44) inset;
+  .bar{
+      width: 50%;
+      height: 100%;
+      background-color: color("primary");
+  }
+}
+
+// Upload Box
+.upload-box{
+  .error{
+      display: inline-block;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+}
+.upload-box .box{
+  width: 100%;
+  padding: 30px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: color("dark");
+  background-color: transparentize(color("primary"), 1 - .3);
+  border: 8px dashed color("primary");
+  cursor: pointer;
+  .icon{
+      font-size: 80px;
+      margin-right: 20px;
+  }
+  .text{
+      text-align: center;
+      .header, .sub-header{
+          margin: 0px;
+          padding: 0px;
+      }
+      .header{
+          font-size: 32px;
+      }
+      .sub-header{
+          font-size: 20px;
+          font-weight: 500;
+      }
+  }
+  &:hover{
+      background-color: transparentize(color("primary"), 1 - .5);
+  }
+  & .invalid{
+      background-color: transparentize(color("danger"), 1 - .3);
+      border-color: color("danger");
+  }
+}
+
+.number{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: right;
+  .form-group{
+      @extend .w-100;
+  }
+}

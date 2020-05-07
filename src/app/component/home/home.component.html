@@ -1,0 +1,62 @@
+<div>
+  <section class="hero-section de-flex">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="offset-md-1"></div>
+        <div class="text-container col-10">
+          <h1>Stay where the <mark>Singing</mark> is</h1>
+          <h1>Evils Don't <mark>Sing</mark></h1>
+          <app-forms></app-forms>
+          <a class="explore-btn" >Explore</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mobile-section">
+    <div class="container">
+      <div class="row">
+        <div class="offset-md-1"></div>
+        <div class="col-4 col-mdr-12 img-wrapper"><img class="mobile-img" src="assets/images/mobile.png"/> <img class="back-img" src="assets/images/confetti.svg"/></div>
+        <div class="col-6 col-mdr-12">
+          <div class="text-container">
+            <h2>Listen to the music anywhere</h2>
+            <p>Our app is available on Web, ios, and Android, You can download it for free</p>
+            <div class="btns"> <a href="#"><img src="assets/images/app-store.svg"/></a> <a href="#"><img src="assets/images/google-play.svg"/></a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="upload-section">
+    <div class="container">
+      <div class="row">
+        <div class="offset-md-1"></div>
+        <div class="col-6 col-md-12 text-container">
+          <h2>Upload your music and share it with the world</h2>
+          <p>Get on our platform to connect with artists, share your music and grow your audience</p>
+          <div><a routerLink="/login">Upload yours</a></div>
+        </div>
+        <div class="col-4 col-mdr-6"><img src="assets/images/upload.svg"/></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="create-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 max-auto col-mdr-12">
+          <h2>Join our community</h2>
+          <div><a class="big-btn" [routerLink]="['/signup']">Create account</a></div>
+          <div class="footer"> <span>Already have account? <a [routerLink]="['/login']">Login</a></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-users *ngIf="logged"></app-users>
+
+<router-outlet></router-outlet>
