@@ -1,6 +1,26 @@
 # Miuzik
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
+A Music sharing app built with Angular for a frontent and NestJs on the backend.
+
+Backend work still in progress
+## **Design**
+-----------------------
+
+#### **Home**
+![Home Page](design/home.jpg)
+
+#### **Login**
+![Home Page](design/login.jpg)
+
+#### **Explore**
+![Home Page](design/explore.jpg)
+
+#### **Profile**
+![Home Page](design/profile.jpg)
+
+#### **Search**
+![Home Page](design/search.jpg)
+
 
 ## Development server
 
